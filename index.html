@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es" class="lock">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=News+Cycle:wght@400;700&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/intro.css">
+    <title>Héctor Tokman</title>
+</head>
+
+<body>
+    <header>
+        <a href="#intro">
+            <h1>Héctor Tokman</h1>
+        </a>
+        <nav>
+            <ul>
+                <a href="#sobremi">
+                    <li>SOBRE MÍ</li>
+                </a>
+                <a href="#mistalleres">
+                    <li>MIS TALLERES</li>
+                </a>
+                <a href="#mistrabajos">
+                    <li>MIS TRABAJOS</li>
+                </a>
+                <a href="#contacto">
+                    <li>CONTACTO</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <div class="stage">
+                <div class="intro-copy">
+                    <div class="copy-inner">
+                        <h2>HÉCTOR TOKMAN</h2>
+                        <p><span>Cineasta • Escritor • Docente</span>
+                            Más de treinta años formando realizadores en Argentina, Chile y Cuba.
+                            Talleres de producción y escritura de guion para contar tus propias historias.</p>
+                    </div>
+                </div>
+
+                <!-- 5 columnas: foto | 2 fotos | video | 2 fotos | foto -->
+                <!-- --order define el orden de aparicion: primero el centro y luego hacia afuera -->
+                <div class="gallery">
+                    <div class="item edge left" data-side="-2">
+                        <div class="card" style="--order: 3">
+                            <img src="./Instagram/TALLERES X INSTAGRAM/2007_RODAJE AGUAS MILAGROSAS.jpg" alt="Rodaje de Aguas Milagrosas">
+                        </div>
+                    </div>
+                    <div class="item" data-side="-1">
+                        <div class="card alta" style="--order: 1">
+                            <img src="./Instagram/TALLERES X INSTAGRAM/2013_CLASE EN CUBA.jpg" alt="Clase en Cuba">
+                        </div>
+                        <div class="card media" style="--order: 2">
+                            <img src="./Instagram/TALLERES%20X%20INSTAGRAM/2018_RODAJE%20EL%20ESCRITOR.jpg" alt="Rodaje de El Escritor">
+                        </div>
+                    </div>
+                    <div class="item slot-video">
+                        <div class="card" style="--order: 0"></div>
+                    </div>
+                    <div class="item" data-side="1">
+                        <div class="card baja" style="--order: 1">
+                            <img src="./Instagram/TALLERES%20X%20INSTAGRAM/2014_MIRADA%20EN%20CORTOS%20CLASE.jpg" alt="Clase en Mirada en Cortos">
+                        </div>
+                        <div class="card larga" style="--order: 2">
+                            <img src="./Instagram/TALLERES%20X%20INSTAGRAM/2015_ERRCV_RODAJE%20TALLER%20ERCCV.jpg" alt="Rodaje del taller ERCCV">
+                        </div>
+                    </div>
+                    <div class="item edge right" data-side="2">
+                        <div class="card" style="--order: 3">
+                            <img src="./Instagram/TALLERES X INSTAGRAM/2015_EICTV_ENTREGA CERTIFICADOS.jpg" alt="Entrega de certificados en EICTV">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-frame">
+                    <video muted playsinline preload="metadata"
+                        poster="./Instagram/TALLERES%20X%20INSTAGRAM/2013_CLASE%20EN%20CUBA.jpg">
+                        <source src="./Instagram/TALLERES%20X%20INSTAGRAM/AAB%20VIDEOS/Video%20Bumbi%20Cuba.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobremi">
+            <!-- Pantallas curvas fijas mientras el texto sube con el scroll -->
+            <div class="screens" aria-hidden="true">
+                <div class="screens-band">
+                    <div class="screen left">
+                        <img src="./Instagram/TALLERES%20X%20INSTAGRAM/2007_RODAJE%20AGUAS%20MILAGROSAS.jpg" alt="">
+                    </div>
+                    <div class="screen center">
+                        <img src="./Instagram/2015_JUNIN_CEREMONIA%20A%20LOS%20TALLERES%20EXTRAMUROS.jpg" alt="">
+                    </div>
+                    <div class="screen right">
+                        <img src="./Instagram/TALLERES%20X%20INSTAGRAM/2018_GRUPO%20RODAJE%20EL%20ESCRITOR.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="aboutText">
+                <h2>Sobre mí</h2>
+                    <p>Me dicen el profe, el maestro, el Bumby o Don Héctor.</p>
+                    <p>Fui co-fundador de la Escuela de Cine de Mendoza en el año 1990 (ERCCV) y el primer Director de
+                        la Escuela de Cine de la Escuela de Comunicación de la Universidad del Mar en Valparaíso, Chile
+                        desde el 2002 hasta el 2012.</p>
+                    <p>Actualmente y desde el año 2012 realizo Talleres Internacionales en la Escuela de Cine de San
+                        Antonio de los Baños, Cuba (EICTV) y he dado cursos de realización a los países del Caribe, en
+                        los talleres de capacitación de la UNESCO.</p>
+                    <p>Estudié y me recibí en la Carrera de Cine de la Escuela de Bellas Artes de la Universidad
+                        Nacional de La Plata (1965/1968).</p>
+                    <p>He trabajado profesionalmente en cámara, fotografía, guion, dirección y producción en varias
+                        productoras de mi autoría. Coordiné como docente de realización junto a los estudiantes de Cine,
+                        ocho muestras anuales con más de 200 cortometrajes.</p>
+                    <p>Fui productor ejecutivo de tres largometrajes realizados con estudiantes de la Escuela de Cine.
+                        "Aguas Milagrosas" y "El Viaje de Emilio" fueron seleccionados y premiados en festivales
+                        internacionales.</p>
+                    <p>Hoy me dedico con absoluta pasión a realizar Talleres Presenciales de Producción y Online de
+                        Escritura de Guion.</p>
+            </div>
+        </section>
+
+        <section id="mistalleres">
+            <h2>Mis talleres</h2>
+            <div class="contenedor">
+                <div class="cajaTaller">
+                    <img src="./images/taller-2025-septiembre.jpg" alt="Imagen del taller de Escritura de guión y diseño de producción">
+                    <h3>Escritura de guión y diseño de producción</h3>
+                    <p class="fecha"><img src="./images/calendar.png" alt="Calendario"> Del 1 de septiembre al 1 de diciembre - 2025 - online</p>
+                    <p>Un espacio de formación para desarrollar historias audiovisuales y convertirlas en proyectos concretos. A través de la escritura de guion y el diseño de producción, los participantes trabajan en sus ideas narrativas y exploran las herramientas necesarias para llevarlas adelante.</p>
+                    <p class="fin">Finalizado</p>
+                </div>
+                <div class="cajaTaller">
+                    <img src="./images/taller-2026-febrero.jpg" alt="Imagen del taller de Escritura de guión y diseño de producción">
+                    <h3>Escritura de guión y diseño de producción </h3>
+                    <p class="fecha"><img src="./images/calendar.png" alt="Calendario"> Del 2 de febrero al 30 de abril - 2026 - online</p>
+                    <p>Un taller online orientado a la creación y el desarrollo de proyectos audiovisuales. Combina el trabajo sobre personajes, conflictos y estructuras narrativas con la planificación de la producción, acompañando a los participantes en el proceso de transformar sus ideas en proyectos realizables.</p>
+                    <p class="fin">Finalizado</p>
+                </div>
+                <div class="cajaTaller">
+                    <img src="./images/taller-2026-septiembre.jpg" alt="Imagen del taller de Escritura de guión y diseño de producción">
+                    <h3>Escritura de guión y diseño de producción</h3>
+                    <p class="fecha"><img src="./images/calendar.png" alt="Calendario"> Del 7 de septiembre al 30 de noviembre - 2026 - online</p>
+                    <p>Dos espacios de trabajo que se complementan: escritura de guion y desarrollo de proyectos. Durante tres meses, los participantes podrán construir sus historias, trabajar en sus guiones y desarrollar estrategias para presentar sus proyectos a fondos internacionales, con el acompañamiento de docentes especializados.</p>
+                    <a href="./inscripcion.html" class="boton">Ver más</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="mistrabajos">
+            <h2>Mis trabajos</h2>
+            <div class="contenedor">
+                <a href="./mistrabajos.html" class="caja">
+                    <img src="./images/cine.jpg" alt="Imagen de cine y televisión">
+                    <div class="cajaTexto">
+                        <h3>Dirección y Producción de Cine</h3>
+                    </div>
+                </a>
+
+                <a href="./mistrabajos.html" class="caja">
+                    <img src="./images/literatura.jpg" alt="Imagen de literatura">
+                    <div class="cajaTexto">
+                        <h3>Guión</h3>
+                    </div>
+                </a>
+
+                <a href="./mistrabajos.html" class="caja">
+                    <img src="./images/docencia.jpg" alt="Imagen de docencia">
+                    <div class="cajaTexto">
+                        <h3>Docencia</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <p>Si te interesa saber más sobre mis talleres, trabajos o simplemente quieres ponerte en contacto, puedes
+                escribirme a través de los siguientes canales:</p>
+            <div class="contactoBox">
+                <a href="https://mail.google.com/mail/u/0/#search/hector.tokman%40gmail.com?compose=new" target="_blank">
+                <img src="./images/emailblanco.png" alt="Icono de correo electrónico">
+                <p>hector.tokman@gmail.com</p>
+                </a>
+            </div>
+            <div class="contactoBox">
+                <a href="https://wa.me/5492613397844" target="_blank">
+                    <img src="./images/whatsappblanco.png" alt="Icono de WhatsApp">
+                <p> +54 9 2613 39-7844</p>
+                </a>
+            </div>
+
+            <nav class="redes">
+                <a href="https://www.facebook.com/hector.tokman" target="_blank">
+                    <img src="./images/facebookblanco.png" alt="Icono de Facebook">
+                </a>
+                <a href="https://www.instagram.com/talleresdecine.ht/" target="_blank">
+                    <img src="./images/instagramblanco.png" alt="Icono de Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/hector-tokman-977b5336/" target="_blank">
+                    <img src="./images/linkedinblanco.png" alt="Icono de LinkedIn">
+                </a>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <h2><span id="year"></span> @ Héctor Tokman - Todos los derechos reservados.</h2>
+    </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        // TIEMPOS DE LA INTRO (en milisegundos)
+        const TIEMPO_APARICION = 950;   // lo que tardan las 7 imagenes en agrandarse
+        const ESPERA_ANTES_DE_BAJAR = 500;
+
+        // INTERVALO DEL VIDEO (en segundos): se reproduce solo este tramo y vuelve a empezar
+        // Ejemplo: 1 minuto 30 segundos = 90. Poné null en VIDEO_FIN para que llegue hasta el final.
+        const VIDEO_INICIO = 38;
+        const VIDEO_FIN = 90;
+
+        const header = document.querySelector('header');
+        const intro = document.getElementById('intro');
+        const stage = intro.querySelector('.stage');
+        const slot = intro.querySelector('.slot-video .card');
+        const frame = intro.querySelector('.video-frame');
+        const video = frame.querySelector('video');
+        const sides = [...intro.querySelectorAll('.gallery .item[data-side]')];
+        const copy = intro.querySelector('.intro-copy');
+
+        // Siempre arrancar desde arriba y sin scroll hasta que termine la intro
+        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+
+        setTimeout(() => {
+            intro.classList.add('settled');
+            document.documentElement.classList.remove('lock');
+        }, TIEMPO_APARICION + ESPERA_ANTES_DE_BAJAR);
+
+        // Ubicar el video al inicio del intervalo apenas se conoce su duracion
+        function irAlInicio() {
+            video.currentTime = VIDEO_INICIO;
+        }
+        if (video.readyState >= 1) irAlInicio();
+        else video.addEventListener('loadedmetadata', irAlInicio);
+
+        function limitarIntervalo() {
+            const fin = VIDEO_FIN ?? video.duration;
+            if (video.currentTime < VIDEO_INICIO - 0.5 || video.currentTime >= fin || video.ended) {
+                video.currentTime = VIDEO_INICIO;
+                if (video.paused) video.play().catch(() => {});
+            }
+        }
+
+        const clamp = (v, min, max) => Math.min(max, Math.max(min, v));
+        const easeInOut = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        // 0 = video como imagen en la galeria, 1 = video en pantalla completa
+        function scrollProgress() {
+            const total = intro.offsetHeight - window.innerHeight;
+            return clamp(-intro.getBoundingClientRect().top / total, 0, 1);
+        }
+
+        const radio = parseFloat(getComputedStyle(frame).borderRadius);
+
+        function render() {
+            const p = scrollProgress();
+            const g = easeInOut(clamp(p / 0.8, 0, 1)); // llega a pantalla completa al 80% del recorrido
+
+            // El marco del video va desde el hueco central de la galeria hasta ocupar todo el stage
+            const s = slot.getBoundingClientRect();
+            const st = stage.getBoundingClientRect();
+            const x = s.left - st.left;
+            const y = s.top - st.top;
+            frame.style.left = x * (1 - g) + 'px';
+            frame.style.top = y * (1 - g) + 'px';
+            frame.style.width = s.width + (st.width - s.width) * g + 'px';
+            frame.style.height = s.height + (st.height - s.height) * g + 'px';
+            frame.style.borderRadius = radio * (1 - g) + 'px';
+
+            // Las demas imagenes se abren hacia los costados y se desvanecen
+            sides.forEach(el => {
+                const side = Number(el.dataset.side);
+                el.style.transform = `translateX(${side * g * 30}vw)`;
+                el.style.opacity = 1 - g;
+            });
+
+            copy.style.opacity = 1 - clamp(g * 2, 0, 1);
+            copy.style.transform = `translateY(${-g * 120}px)`;
+
+            if (p > 0) limitarIntervalo();
+
+            // El video empieza a reproducirse apenas se baja con el mouse
+            if (p > 0.005 && video.paused) {
+                video.play().catch(() => {});
+            } else if (p === 0 && !video.paused) {
+                video.pause();
+            }
+
+            document.body.classList.toggle('show-header', p >= 1);
+            header.classList.toggle('scrolled', intro.getBoundingClientRect().bottom <= header.offsetHeight);
+
+            requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+    </script>
+</body>
+
+</html>
