@@ -97,7 +97,7 @@
                 </div>
 
                 <div class="video-frame">
-                    <video muted playsinline preload="metadata">
+                    <video muted playsinline preload="metadata" poster="./images/image.png">
                         <source src="./Instagram/TALLERES X INSTAGRAM/AAB VIDEOS/Video Bumbi Cuba.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -237,7 +237,7 @@
 
         // TIEMPOS DE LA INTRO (en milisegundos)
         const TIEMPO_APARICION = 950;   // lo que tardan las 7 imagenes en agrandarse
-        const ESPERA_ANTES_DE_BAJAR = 500;
+        const ESPERA_ANTES_DE_BAJAR = 100;
 
         // INTERVALO DEL VIDEO (en segundos): se reproduce solo este tramo y vuelve a empezar
         // Ejemplo: 1 minuto 30 segundos = 90. Poné null en VIDEO_FIN para que llegue hasta el final.
@@ -262,12 +262,8 @@
             document.documentElement.classList.remove('lock');
         }, TIEMPO_APARICION + ESPERA_ANTES_DE_BAJAR);
 
-        // Ubicar el video al inicio del intervalo apenas se conoce su duracion
-        function irAlInicio() {
-            video.currentTime = VIDEO_INICIO;
-        }
-        if (video.readyState >= 1) irAlInicio();
-        else video.addEventListener('loadedmetadata', irAlInicio);
+        // El video no se adelanta al cargar: mover currentTime antes de reproducir oculta el poster.
+        // limitarIntervalo() lo lleva a VIDEO_INICIO recien cuando se empieza a bajar.
 
         function limitarIntervalo() {
             const fin = VIDEO_FIN ?? video.duration;

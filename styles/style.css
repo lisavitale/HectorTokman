@@ -36,7 +36,7 @@ header{
 }
 
 header.scrolled{
-    background-color: transparent;
+    background-color: #1a1a1a;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -492,12 +492,37 @@ footer{
 }
 
 /* HTML MIS TRABAJOS */
+/* Mismo fondo negro y efecto de pelicula antigua que el index */
+body.paginaTrabajos{
+    background-color: #1b1b1b;
+    color: #d9d9d9;
+}
+
+body.paginaTrabajos::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../images/peliculaantigua.gif");
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+body.paginaTrabajos header{
+    background-color: #1b1b1b;
+}
+
+.boxWork h3{
+    color: #FAF8F5;
+}
+
 /* Menú de navegación de trabajos */
 .trabajosNav{
     background-color: transparent;
     padding: 0;
     margin: 20px 0;
-    border-bottom: 1px solid #D4D1CC;
+    border-bottom: 1px solid #3a3a3a;
 }
 
 .trabajosNav ul{
@@ -515,7 +540,7 @@ footer{
     padding: 15px 30px;
     text-align: center;
     cursor: pointer;
-    color: #1C1714;
+    color: #FAF8F5;
     font-family: "Montserrat", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
@@ -524,7 +549,7 @@ footer{
 }
 
 .nav-item:hover{
-    background-color: #EBE9E6;
+    background-color: #2a2a2a;
     color: #D4AF37;
 }
 
@@ -592,7 +617,7 @@ footer{
     font-size: 2rem;
     line-height: 1.8;
     margin-bottom: 15px;
-    color: #2A211D;
+    color: #d9d9d9;
     font-family: "Outfit", sans-serif;
 }
 
@@ -603,7 +628,7 @@ footer{
     font-family: "Roboto", sans-serif;
     font-size: 5rem;
     padding: 20px;
-    color: #1C1714;
+    color: #FAF8F5;
 }
 
 #introduccionTrabajos{
@@ -611,7 +636,7 @@ footer{
     justify-content: center;
     font-family: "Montserrat", sans-serif;
     margin: 0 auto 40px;
-    color: #2A211D;
+    color: #d9d9d9;
 }
 
 #introduccionTrabajos p{
