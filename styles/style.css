@@ -214,6 +214,13 @@ header nav{
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
 }
 
+/* Caja negra semitransparente detras del texto */
+.aboutCard{
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 40px 45px 20px;
+    border-radius: 14px;
+}
+
 .aboutText h2{
     font-family: "Outfit", sans-serif;
     font-size: 4rem;
