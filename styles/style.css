@@ -115,6 +115,11 @@ header nav{
     grid-column: 3/5;
 }
 
+/* Boton hamburguesa: oculto en pantallas grandes */
+.menuToggle{
+    display: none;
+}
+
 /* SOBRE MÍ */
 /* Las pantallas quedan fijas (sticky) y el texto sube con el scroll natural de la pagina:
    entra por abajo, pasa por el centro y sale por arriba hacia la siguiente seccion */
@@ -646,7 +651,92 @@ body.paginaTrabajos header{
     }
 }
 
-/* RESPONSIVE (el header no cambia) */
+/* RESPONSIVE */
+
+/* HEADER CON MENU HAMBURGUESA (celular y tablet) */
+@media (max-width: 1023px) and (min-width: 300px){
+    header{
+        grid-template-columns: 1fr auto;
+        justify-items: stretch;
+    }
+
+    h1{
+        font-size: 2.4rem;
+        padding-left: 20px;
+    }
+
+    .menuToggle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        margin-right: 8px;
+        padding: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menuToggle span{
+        display: block;
+        height: 2px;
+        background-color: #FAF8F5;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    header.scrolled .menuToggle span{
+        background-color: #cccccc;
+    }
+
+    /* Las tres lineas se convierten en una X cuando el menu esta abierto */
+    .menuToggle:not(.collapsed) span:nth-child(1){
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menuToggle:not(.collapsed) span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menuToggle:not(.collapsed) span:nth-child(3){
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Menu desplegable debajo del header (Bootstrap agrega .show y .collapsing) */
+    header nav{
+        grid-column: 1 / -1;
+        grid-row: 1;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1a1a1a;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    header nav.collapse:not(.show){
+        display: none;
+    }
+
+    header nav.collapsing{
+        height: 0;
+        overflow: hidden;
+        transition: height 0.35s ease;
+    }
+
+    header ul{
+        flex-direction: column;
+        gap: 0;
+        padding: 6px 0 12px;
+    }
+
+    header ul li{
+        width: fit-content;
+        margin: 14px auto;
+    }
+}
 
 /* TABLET */
 @media (max-width: 1023px) and (min-width: 569px){
@@ -668,6 +758,11 @@ body.paginaTrabajos header{
 
 /* CELULAR */
 @media (max-width: 568px) and (min-width: 300px){
+    h1{
+        font-size: 2rem;
+        padding-left: 16px;
+    }
+
     .contenedor,
     #mistalleres .contenedor{
         grid-template-columns: 1fr;

@@ -15,7 +15,13 @@
         <a href="./index.html">
             <h1>Héctor Tokman</h1>
         </a>
-        <nav>
+        <!-- Boton hamburguesa (solo se ve en celular), abre y cierra el menu con Bootstrap -->
+        <button class="menuToggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="menuPrincipal" class="collapse">
             <ul>
                 <a href="./index.html#sobremi"><li>SOBRE MÍ</li></a>
                 <a href="./index.html#mistalleres"><li>MIS TALLERES</li></a>
@@ -160,8 +166,15 @@
     <footer>
         <h2><span id="year"></span> @ Héctor Tokman - Todos los derechos reservados.</h2>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
+
+        // Cerrar el menu hamburguesa al elegir una opcion
+        const menu = document.getElementById('menuPrincipal');
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }));
 
         // Menú de navegación de secciones
         const navItems = document.querySelectorAll('.nav-item');
