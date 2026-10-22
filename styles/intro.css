@@ -192,14 +192,97 @@ body.show-header header{
     display: block;
 }
 
-@media (max-width: 700px){
+/* TABLET: sin las fotos de los bordes, el resto de la galeria mas grande */
+@media (max-width: 1023px) and (min-width: 569px){
     :root{
-        --u: 1.8vw;
-        --radius: 10px;
+        --u: min(1.2vw, 1.3vh);
+        --radius: 12px;
     }
 
     .intro-copy{
-        top: 16vh;
+        top: 12vh;
+    }
+
+    .intro-copy h2{
+        font-size: clamp(7rem, 11vw, 11rem);
+    }
+
+    .intro-copy p{
+        font-size: 1.5rem;
+        max-width: 50ch;
+    }
+
+    .gallery .item.edge{
+        display: none;
+    }
+}
+
+/* CELULAR: video arriba a todo el ancho y debajo las 4 fotos en una fila */
+@media (max-width: 568px) and (min-width: 300px){
+    :root{
+        /* ancho de la galeria: limitado por el alto para que no tape el texto */
+        --gw: min(calc(100vw - 32px), 48vh);
+        --radius: 8px;
+    }
+
+    .intro-copy{
+        top: 9vh;
+    }
+
+    .intro-copy h2{
+        font-size: clamp(4.8rem, 17vw, 8rem);
+    }
+
+    .intro-copy p{
+        font-size: clamp(1.2rem, 3.4vw, 1.4rem);
+        margin-top: 1.4rem;
+        line-height: 1.5;
+    }
+
+    .intro-copy p span{
+        letter-spacing: 0.15em;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: calc(var(--gw) * 0.03);
+        width: var(--gw);
+    }
+
+    #intro.settled .gallery{
+        top: calc(100% - 4vh - var(--gw) * 0.43);
+    }
+
+    .gallery .item.edge{
+        display: none;
+    }
+
+    .gallery .slot-video{
+        grid-column: 1 / -1;
+        order: -1;
+        margin-top: 0;
+    }
+
+    .gallery .item[data-side]{
+        flex-direction: row;
+        gap: calc(var(--gw) * 0.03);
+    }
+
+    .gallery .card,
+    .gallery .card.alta,
+    .gallery .card.media,
+    .gallery .card.baja,
+    .gallery .card.larga{
+        width: auto;
+        flex: 1;
+        height: calc(var(--gw) * 0.26);
+    }
+
+    .gallery .slot-video .card{
+        flex: none;
+        width: 100%;
+        height: calc(var(--gw) * 0.56);
     }
 }
 

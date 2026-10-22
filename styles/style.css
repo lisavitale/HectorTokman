@@ -232,20 +232,6 @@ header nav{
     margin-bottom: 2.4rem;
 }
 
-@media (max-width: 700px){
-    .screen.center{
-        flex: 2;
-    }
-
-    .screen.left{
-        transform: rotateY(35deg);
-    }
-
-    .screen.right{
-        transform: rotateY(-35deg);
-    }
-}
-
 /* MIS TRABAJOS */
 #mistrabajos{
     background-color: #202020;
@@ -660,3 +646,103 @@ body.paginaTrabajos header{
     }
 }
 
+/* RESPONSIVE (el header no cambia) */
+
+/* TABLET */
+@media (max-width: 1023px) and (min-width: 569px){
+    /* Talleres y trabajos: una caja debajo de la otra */
+    .contenedor,
+    #mistalleres .contenedor{
+        grid-template-columns: 1fr;
+        max-width: 560px;
+    }
+
+    .caja img{
+        height: 280px;
+    }
+
+    .boxWork img{
+        max-width: 220px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 568px) and (min-width: 300px){
+    .contenedor,
+    #mistalleres .contenedor{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    #mistalleres h2,
+    #mistrabajos h2{
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+    }
+
+    .caja img{
+        height: 200px;
+    }
+
+    .aboutText{
+        font-size: 1.5rem;
+    }
+
+    .aboutCard{
+        padding: 30px 18px 10px;
+    }
+
+    .aboutText h2{
+        font-size: 3.2rem;
+    }
+
+    #contacto{
+        font-size: 1.6rem;
+    }
+
+    .contactoBox img{
+        height: 24px;
+    }
+
+    .redes img{
+        height: 48px;
+    }
+
+    footer h2{
+        font-size: 1.3rem;
+    }
+
+    /* Pagina mis trabajos */
+    .trabajosNav ul{
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .nav-item{
+        padding: 12px 14px;
+    }
+
+    #navTrabajos h2{
+        font-size: 3.4rem;
+        text-align: center;
+    }
+
+    .boxWork{
+        flex-direction: column;
+        padding-left: 25px;
+        gap: 15px;
+    }
+
+    .boxWork img{
+        max-width: 100%;
+    }
+
+    .boxWork h3{
+        font-size: 2.2rem;
+    }
+
+    .trabajo-seccion p,
+    #introduccionTrabajos p{
+        font-size: 1.6rem;
+    }
+}
