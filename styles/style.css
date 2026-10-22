@@ -29,7 +29,7 @@ header{
     justify-items: center;
     position: sticky;
     top: 0;
-    height: 8vh;
+    height: 10vh;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0);
     z-index: 1000;
@@ -753,6 +753,16 @@ body.paginaTrabajos header{
 
     .boxWork img{
         max-width: 220px;
+    }
+}
+
+@media (max-width: 1043px) and (min-width: 1024px){
+    header h1{
+        font-size: 3rem;
+    }
+
+    header a{
+        font-size: 1.3rem;
     }
 }
 
