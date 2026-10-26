@@ -36,17 +36,11 @@
             <h2>Mi trayectoria</h2>
             <nav class="trabajosNav">
                 <ul>
-                    <li class="nav-item active" data-section="introduccionTrabajos">Introducción</li>
-                    <li class="nav-item" data-section="cineTV">Dirección y Producción de Cine</li>
+                    <li class="nav-item" data-section="cineTV">Dirección y Producción de Cine y TV</li>
                     <li class="nav-item" data-section="docencia">Docencia</li>
-                    <li class="nav-item" data-section="literatura">Guión</li>
+                    <li class="nav-item" data-section="guion">Guion</li>
                 </ul>
             </nav>
-        </section>
-
-        <section id="introduccionTrabajos" class="trabajo-seccion active">
-            <p>A lo largo de mi carrera he transitado múltiples facetas narrativas y audiovisuales, explorando distintos lenguajes para contar historias y transmitir conocimiento a nuevas generaciones.</p>
-            <p>Desempeñándome como guionista, director de cine documental y televisión, productor, docente y autor literario, mi búsqueda siempre ha sido el encuentro entre la estructura dramática sólida y la mirada autoral comprometida. En esta sección puedes explorar mi recorrido profesional clasificado por disciplinas.</p>
         </section>
 
         <section id="cineTV" class="trabajo-seccion">
@@ -121,7 +115,7 @@
             </div>
         </section>
 
-        <section id="literatura" class="trabajo-seccion">
+        <section id="guion" class="trabajo-seccion">
             <div class="boxWork">
                 <div>
                     <h3>El Próximo Suicida</h3>
@@ -192,9 +186,16 @@
         });
 
         // Abrir directamente una pestaña desde un link (ej: mistrabajos.html#docencia)
+        // Sin # en el link se abre la primera pestaña
         const pestaña = location.hash.slice(1);
-        if ([...navItems].some(nav => nav.dataset.section === pestaña)) {
+        if (![...navItems].some(nav => nav.dataset.section === pestaña)) {
+            mostrarSeccion(navItems[0].dataset.section);
+        } else {
             mostrarSeccion(pestaña);
+
+            // El navegador baja solo hasta la seccion del #; volvemos arriba para que se vean el titulo y las pestañas
+            if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+            window.addEventListener('load', () => setTimeout(() => window.scrollTo(0, 0), 0));
         }
     </script>
 </body>
