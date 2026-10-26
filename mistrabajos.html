@@ -180,21 +180,22 @@
         const navItems = document.querySelectorAll('.nav-item');
         const sections = document.querySelectorAll('.trabajo-seccion');
 
+        function mostrarSeccion(sectionId) {
+            // Marcar como activa solo la pestaña de esa sección
+            navItems.forEach(nav => nav.classList.toggle('active', nav.dataset.section === sectionId));
+            // Mostrar solo la sección seleccionada
+            sections.forEach(section => section.classList.toggle('active', section.id === sectionId));
+        }
+
         navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const sectionId = item.dataset.section;
-
-                // Remover clase active de todos los items
-                navItems.forEach(nav => nav.classList.remove('active'));
-                // Agregar clase active al item clickeado
-                item.classList.add('active');
-
-                // Ocultar todas las secciones
-                sections.forEach(section => section.classList.remove('active'));
-                // Mostrar la sección seleccionada
-                document.getElementById(sectionId).classList.add('active');
-            });
+            item.addEventListener('click', () => mostrarSeccion(item.dataset.section));
         });
+
+        // Abrir directamente una pestaña desde un link (ej: mistrabajos.html#docencia)
+        const pestaña = location.hash.slice(1);
+        if ([...navItems].some(nav => nav.dataset.section === pestaña)) {
+            mostrarSeccion(pestaña);
+        }
     </script>
 </body>
 </html>

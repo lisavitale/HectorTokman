@@ -384,37 +384,71 @@ header nav{
     flex-shrink: 0;
 }
 
-.cajaTaller .boton{
-    margin: 15px 20px 20px;
-    padding: 10px 20px;
-    background-color: #c9c9c9;
-    color: #000000;
-    border-radius: 8px;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
-
-.cajaTaller .boton:hover{
-    background-color: #D4AF37;
-    color: #1C1714;
-}
-
 .fecha{
     color: #7D7D7D !important;
     font-family: "News Cycle", sans-serif;
 }
 
-.cajaTaller .fin{
-    background-color: #D4AF37;
-    color: #1C1714;
-    justify-content: center;
-    margin: 15px 20px 20px;
+/* Footer de la card: queda siempre abajo de todo */
+.tallerFooter{
+    margin-top: auto;
+    padding: 15px 20px 20px;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Carteles de estado (no son botones) y boton "Ver más" comparten la misma forma */
+.tallerFooter .estado,
+.tallerFooter .boton{
+    display: block;
     padding: 10px 20px;
     border-radius: 8px;
-    font-size: 1.2rem;
+    text-align: center;
+    font-size: 1.6rem;
     font-weight: 600;
+}
+
+.estado{
+    cursor: default;
+}
+
+.estado.finalizado{
+    background-color: #D4AF37;
+    color: #1C1714;
+}
+
+.estado.enProgreso{
+    background-color: #4CAF50;
+    color: #0F1F10;
+}
+
+/* Solo para talleres que todavia no empezaron */
+.tallerFooter .boton{
+    background-color: #c9c9c9;
+    color: #000000;
+    transition: background-color 0.3s ease;
+}
+
+.tallerFooter .boton:hover{
+    background-color: #D4AF37;
+    color: #1C1714;
+}
+
+/* Link debajo de las cards */
+.verTodos{
+    margin-top: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FAF8F5;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.verTodos:hover{
+    color: #D4AF37;
 }
 
 /* CONTACTO */
