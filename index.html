@@ -155,9 +155,18 @@
             <h2>Mis talleres</h2>
             <!-- Footer de cada card segun el estado del taller:
             Finalizado:        <div class="tallerFooter"><span class="estado finalizado">Finalizado</span></div>
-            En progreso:       <div class="tallerFooter"><span class="estado enProgreso">En progreso</span><a href="./inscripcion.html" class="boton">Ver más</a></div>
-            Todavia no empezo: <div class="tallerFooter"><a href="./inscripcion.html" class="boton">Ver más</a></div> -->
+            En progreso:       <div class="tallerFooter"><span class="estado enProgreso">En progreso</span></div>
+            Todavia no empezo: <div class="tallerFooter"><button type="button" class="boton" data-modal="modalInscripcion">Ver más</button></div> -->
             <div class="contenedor">
+                <div class="cajaTaller">
+                    <img src="./images/curso1.jpg" alt="Imagen del taller de Guion de cortometraje">
+                    <h3>Guion de cortometraje: de la idea a la escena</h3>
+                    <p class="fecha"><img src="./images/calendar.png" alt="Calendario"> Del 1 de marzo al 31 de mayo - 2027 - online</p>
+                    <div class="tallerFooter">
+                        <button type="button" class="boton" data-modal="modalInscripcion">Ver más</button>
+                    </div>
+                </div>
+
                 <div class="cajaTaller">
                     <img src="./images/taller-2026-septiembre (1).jpg" alt="Imagen del taller de Escritura de guión y diseño de producción">
                     <h3>Escritura de guión y diseño de producción</h3>
@@ -165,7 +174,6 @@
                     <!-- <p>Dos espacios de trabajo que se complementan: escritura de guion y desarrollo de proyectos. Durante tres meses, los participantes podrán construir sus historias, trabajar en sus guiones y desarrollar estrategias para presentar sus proyectos a fondos internacionales, con el acompañamiento de docentes especializados.</p> -->
                     <div class="tallerFooter">
                         <span class="estado enProgreso">En progreso</span>
-                        <a href="./inscripcion.html" class="boton">Ver más</a>
                     </div>
                 </div>
                 
@@ -190,6 +198,27 @@
                 </div>
             </div>
             <a href="./mistrabajos.html#docencia" class="verTodos">Ver todos los talleres</a>
+
+            <!-- Ventana modal de inscripcion (la abren los botones "Ver más" de talleres que no empezaron) -->
+            <dialog id="modalInscripcion" class="modal">
+                <div class="modalContenido">
+                    <button type="button" class="modalCerrar" aria-label="Cerrar">&times;</button>
+                    <h3>Inscripciones</h3>
+                    <p>Para inscribirte comunicate por email o WhatsApp:</p>
+                    <div class="contactoBox">
+                        <a href="https://mail.google.com/mail/u/0/#search/hector.tokman%40gmail.com?compose=new" target="_blank">
+                            <img src="./images/emailblanco.png" alt="Icono de correo electrónico">
+                            <span>hector.tokman@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="contactoBox">
+                        <a href="https://wa.me/5492613397844" target="_blank">
+                            <img src="./images/whatsappblanco.png" alt="Icono de WhatsApp">
+                            <span>+54 9 2613 39-7844</span>
+                        </a>
+                    </div>
+                </div>
+            </dialog>
         </section>
 
         <section id="mistrabajos">
@@ -262,6 +291,16 @@
         menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
             if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
         }));
+
+        // Ventanas modales: los botones con data-modal abren el <dialog> con ese id
+        document.querySelectorAll('[data-modal]').forEach(boton => {
+            boton.addEventListener('click', () => document.getElementById(boton.dataset.modal).showModal());
+        });
+        document.querySelectorAll('dialog.modal').forEach(modal => {
+            modal.querySelector('.modalCerrar').addEventListener('click', () => modal.close());
+            // Cerrar tocando afuera de la ventana
+            modal.addEventListener('click', e => { if (e.target === modal) modal.close(); });
+        });
 
         // TIEMPOS DE LA INTRO (en milisegundos)
         const TIEMPO_APARICION = 950;   // lo que tardan las 7 imagenes en agrandarse

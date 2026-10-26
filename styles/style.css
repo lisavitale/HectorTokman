@@ -334,10 +334,15 @@ header nav{
 
 #mistalleres .contenedor{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1300px;
     width: 100%;
+}
+
+/* Todas las imagenes de las cards con la misma proporcion que los afiches (4:5) */
+.cajaTaller > img{
+    aspect-ratio: 4 / 5;
 }
 
 .cajaTaller{
@@ -427,6 +432,10 @@ header nav{
 
 /* Solo para talleres que todavia no empezaron */
 .tallerFooter .boton{
+    width: 100%;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
     background-color: #c9c9c9;
     color: #000000;
     transition: background-color 0.3s ease;
@@ -435,6 +444,62 @@ header nav{
 .tallerFooter .boton:hover{
     background-color: #D4AF37;
     color: #1C1714;
+}
+
+/* VENTANA MODAL (inscripcion) */
+dialog.modal{
+    margin: auto;
+    width: min(420px, calc(100vw - 32px));
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    background-color: #131313;
+    color: #FAF8F5;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+dialog.modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modalContenido{
+    position: relative;
+    padding: 40px 30px 35px;
+    text-align: center;
+}
+
+.modalContenido h3{
+    font-family: "Outfit", sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.modalContenido p{
+    font-size: 1.6rem;
+    color: #CFC6BB;
+    margin-bottom: 10px;
+}
+
+.modalContenido .contactoBox a{
+    font-size: 1.6rem;
+}
+
+.modalCerrar{
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #FAF8F5;
+    font-size: 3rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modalCerrar:hover{
+    color: #D4AF37;
 }
 
 /* Link debajo de las cards */
