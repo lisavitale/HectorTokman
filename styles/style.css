@@ -679,6 +679,15 @@ body.paginaTrabajos header{
     align-items: flex-start;
 }
 
+.listaTalleres{
+    list-style: disc;
+}
+
+.boxWork li{
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+}
+
 .boxWork::before{
     content: '';
     position: absolute;
