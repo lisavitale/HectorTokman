@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Trabajos de Héctor Tokman</title>
 </head>
+
 <body class="paginaTrabajos">
     <header class="scrolled">
         <a href="./index.html">
             <h1>Héctor Tokman</h1>
         </a>
         <!-- Boton hamburguesa (solo se ve en celular), abre y cierra el menu con Bootstrap -->
-        <button class="menuToggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <button class="menuToggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
             <span></span>
             <span></span>
             <span></span>
         </button>
         <nav id="menuPrincipal" class="collapse">
             <ul>
-                <a href="./index.html#sobremi"><li>SOBRE MÍ</li></a>
-                <a href="./index.html#mistalleres"><li>MIS TALLERES</li></a>
-                <a href="./index.html#mistrabajos"><li class="active">MI TRAYECTORIA</li></a>
-                <a href="./index.html#contacto"><li>CONTACTO</li></a>
+                <a href="./index.html#sobremi">
+                    <li>SOBRE MÍ</li>
+                </a>
+                <a href="./index.html#mistalleres">
+                    <li>MIS TALLERES</li>
+                </a>
+                <a href="./index.html#mistrabajos">
+                    <li class="active">MI TRAYECTORIA</li>
+                </a>
+                <a href="./index.html#contacto">
+                    <li>CONTACTO</li>
+                </a>
             </ul>
         </nav>
     </header>
@@ -44,57 +57,106 @@
         </section>
 
         <section id="cineTV" class="trabajo-seccion">
+            <div class="introduccionWork">
+                <p>Hay personas que tienen la suerte de saber qué quieren ser en la vida. No fue mi caso. Pero cuando el
+                    cine vino hacia mi vida, todo cambió y no tuve dudas de que esa profesión era mi destino.
+                    La Licenciatura en Cine de la Escuela de Bellas Artes de La Plata fue la primera en Latinoamerica.
+                    Allí, con solo trece compañeros, inicié mi recorrido.</p>
+            </div>
             <div class="boxWork">
                 <div>
-                    <h3>Guionista</h3>
-                    <p class="fecha">Eyeworks | sep. 2016 - nov. 2016</p>
-                    <p><b>Overhaulin - Argentina</b></p>
-                    <p>Emisión especial para Latinoamérica del reconocido formato de Discovery Channel.</p>
+                    <h3>Productor Ejecutivo</h3>
+                    <p class="fecha">2010</p>
+                    <p><b>“El Viaje de Emilio“</b></p>
+                    <p>Largometraje de ficción – Chile</p>
+                    <p>Dirección: Abril Trejo</p>
                 </div>
+                <a href="https://cinechile.cl/pelicula/el-viaje-de-emilio/" target="_blank"><img
+                        src="./images/cine-elViajeDeEmilio.jpg" alt="Imagen del largometraje El Viaje de Emilio"></a>
             </div>
 
             <div class="boxWork">
                 <div>
-                    <h3>Guionista</h3>
-                    <p class="fecha">Televisión Pública | ago. 2016 - oct. 2016</p>
-                    <p><b>Vas a viajar en mi Sidecar</b></p>
-                    <p>Escritura de Guion de la serie documental "Vas a viajar en mi Sidecar".</p>
+                    <h3>Productor Ejecutivo</h3>
+                    <p class="fecha">2007</p>
+                    <p><b>"Aguas Milagrosas"</b></p>
+                    <p>Largometraje de ficción - Chile</p>
                 </div>
+                <a href="https://cinechile.cl/pelicula/aguas-milagrosas/" target="_blank"><img
+                        src="./images/cine-aguasMilagrosas.jpg" alt="Imagen del largometraje Aguas Milagrosas"></a>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>Coordinador de producciones cinematográficas</h3>
+                    <p class="fecha">2002 - 2011</p>
+                    <p>Más de 200 producciones de cortometrajes realizadas en el ámbito académico.
+                        Carrera de Cine, Video y Televisión - Escuela de Comunicación - Universidad del Mar - Chile</p>
+                </div>
+                <img src="./images/uni-UdelMar.jpg" alt="Imagen de la Universidad del Mar, Chile">
             </div>
 
             <div class="boxWork">
                 <div>
                     <h3>Director</h3>
-                    <p class="fecha">El Grillo Cine | 2010 - 2012</p>
-                    <p><b>Tiempo Muerto</b> - Película Documental</p>
-                    <p>Ganador Mención especial Feisal en el 25º Festival Internacional de Cine de Mar del Plata. <br> Selección Oficial Documental Internacional - Festival Internacional de Cine de Viña del Mar 2010.</p>
+                    <p class="fecha">1990</p>
+                    <p><b>"Crisis"</b></p>
+                    <p>Mediometraje – Mendoza, Argentina</p>
+                    <p>Coproducción con el INCAA </p>
                 </div>
-                <a href="https://youtu.be/ebzAxTdryJY?si=tU-9U-vanac2JaBv" target="_blank"><img src="./images/tiempoMuerto.jpg" alt="Imagen de la película Tiempo Muerto"></a>
+                <img src="./images/cine-crisis.jpg" alt="Imagen del mediometraje Crisis"></a>
             </div>
 
             <div class="boxWork">
                 <div>
-                    <h3>Director</h3>
-                    <p class="fecha">Tec TV | nov. 2013 - feb. 2014</p>
-                    <p><b>Neuropolis</b></p>
-                    <p>Serie documental de 8 capítulos (Tec en premios).</p>
+                    <h3>Realizador de publicidad</h3>
+                    
                 </div>
             </div>
 
             <div class="boxWork">
                 <div>
-                    <h3>Coordinador de Contenidos</h3>
-                    <p class="fecha">Lupa TV | feb. 2012 - ago. 2013</p>
-                    <p><i>"Ni Dios Ni Amo, historia del anarquismo en la Argentina"</i> - Serie documental. 13 capítulos.<br><i>"4 de Copas"</i> - Docuficción.</p>
+                    <h3>Director de Fotografía de cortos publicitarios</h3>
+                    
+                </div>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>Asistente de Producción para películas como Invasión, Kuma Ching, La Guita, entre otras</h3>
+                    
+                </div>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>Fotógrafo Profesional</h3>
+                    
+                </div>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>Camarógrafo y realizador de Documentales para Canal 2 de La Plata en 16 mm</h3>
+                    
                 </div>
             </div>
         </section>
 
         <section id="docencia" class="trabajo-seccion">
+            <div class="introduccionWork">
+                <p>Siendo muy joven, cuando estudiaba Biología en Ciencias Exactas, me inscribí en una actividad que
+                    hacía la Extensión Universitaria: talleres de alfabetización.
+                    Esa experiencia despertó en mí la pasión por la docencia. Comprendí que se aprende mucho más de lo
+                    que se enseña.
+                    Desde entonces me convertí en el profe, el maestro, un catalizador de proyectos o, desde una visión
+                    metafórica de lo que debe ser enseñar, en una enzima alguien que produce cambios en los otros.</p>
+            </div>
             <div class="boxWork">
                 <div>
                     <h3>Taller Internacional: Dramaturgia y Escritura Documental</h3>
-                    <p class="fecha">Escuela Internacional de Cine y Televisión, San Antonio de los Baños, Cuba | jun. 2016 - actualidad</p>
+                    <p class="fecha">Escuela Internacional de Cine y Televisión, San Antonio de los Baños, Cuba | jun.
+                        2016 - actualidad</p>
                 </div>
             </div>
 
@@ -102,44 +164,46 @@
                 <div>
                     <h3>Instituto de Arte Mauricio Kagel - Licenciatura en Cine Documental</h3>
                     <p class="fecha">Universidad Nacional de San Martín (UNSAM) | mar. 2016 - actualidad</p>
-                    <p>Docente en el Taller de guion y realización. <br>Docente en la cátedra Estructuras dramáticas.</p>
+                    <p>Docente en el Taller de guion y realización. <br>Docente en la cátedra Estructuras dramáticas.
+                    </p>
                 </div>
             </div>
 
             <div class="boxWork">
                 <div>
                     <h3>Cátedra Taller de Escritura de Guion</h3>
-                    <p class="fecha">Escuela Nacional de Experimentación y Realización Cinematográfica (ENERC) | 2005 - actualidad</p>
+                    <p class="fecha">Escuela Nacional de Experimentación y Realización Cinematográfica (ENERC) | 2005 -
+                        actualidad</p>
                     <p>Segundo Año. Especialidad Guion.</p>
                 </div>
             </div>
         </section>
 
         <section id="guion" class="trabajo-seccion">
-            <div class="boxWork">
-                <div>
-                    <h3>El Próximo Suicida</h3>
-                    <p class="fecha">Novela | Editorial azulfrancia (2021)</p>
-                    <p><b>ISBN:</b> 9789878422190 <br><b>Páginas:</b> 184<br><b>Formato:</b> Tapa Blanda</p>
-                    <p><b>Sinopsis:</b> "Operaba los químicos y las placas fotosensibles con precisión quirúrgica. Y así: desde el fondo de una cubeta, fue emergiendo paulatinamente el dolor del recuerdo. Primero, la cuenca vacía. Luego los contornos del rostro mulato. Las cicatrices que surcaban su cara. Flotaba en un líquido revelador, como ahogada. Posadas había hecho de un instante ya muerto un presente eterno".</p>
-                </div>
-                <img src="./images/elProximoSuicida.png" alt="Portada del libro El Próximo Suicida">
-            </div>
+            <div class="introduccionWork">
+                <p>Un guionista es un cineasta que escribe.
+                    En ese sentido, mientras trabajaba en cine, me di cuenta del valor que tenía imaginar y escribir mis
+                    propias historias. Así fue como descubrí el sentido de las ideas, su tratamiento en el marco de los
+                    personajes con sus conflictos, las estructuras y esos finales que brotan de uno mismo.</p>
+                <!-- <div class="boxWork">
+                    
+                </div> -->
         </section>
 
         <section id="contacto">
             <p>Si te interesa saber más sobre mis talleres, trabajos o simplemente quieres ponerte en contacto, puedes
                 escribirme a través de los siguientes canales:</p>
             <div class="contactoBox">
-                <a href="https://mail.google.com/mail/u/0/#search/hector.tokman%40gmail.com?compose=new" target="_blank">
-                <img src="./images/emailblanco.png" alt="Icono de correo electrónico">
-                <p>hector.tokman@gmail.com</p>
+                <a href="https://mail.google.com/mail/u/0/#search/hector.tokman%40gmail.com?compose=new"
+                    target="_blank">
+                    <img src="./images/emailblanco.png" alt="Icono de correo electrónico">
+                    <p>hector.tokman@gmail.com</p>
                 </a>
             </div>
             <div class="contactoBox">
                 <a href="https://wa.me/5492613397844" target="_blank">
                     <img src="./images/whatsappblanco.png" alt="Icono de WhatsApp">
-                <p> +54 9 2613 39-7844</p>
+                    <p> +54 9 2613 39-7844</p>
                 </a>
             </div>
 
@@ -160,7 +224,9 @@
     <footer>
         <h2><span id="year"></span> @ Héctor Tokman - Todos los derechos reservados.</h2>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
 
@@ -199,4 +265,5 @@
         }
     </script>
 </body>
+
 </html>

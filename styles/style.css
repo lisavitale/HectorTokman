@@ -663,6 +663,12 @@ body.paginaTrabajos header{
     animation: fadeIn 0.3s ease-in;
 }
 
+.introduccionWork{
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+
 .boxWork{
     position: relative;
     padding-left: 40px;
