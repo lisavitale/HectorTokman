@@ -434,13 +434,13 @@ header nav{
     border: none;
     font-family: inherit;
     cursor: pointer;
-    background-color: #c9c9c9;
+    background-color: #1b50b3;
     color: #000000;
     transition: background-color 0.3s ease;
 }
 
 .tallerFooter .boton:hover{
-    background-color: #D4AF37;
+    background-color: #3c6cc4;
     color: #1C1714;
 }
 
