@@ -64,7 +64,7 @@ body.show-header header{
     position: absolute;
     left: 0;
     right: 0;
-    top: 14vh;
+    top: 10vh;
     padding: 0 16px;
     text-align: center;
     color: var(--intro-text);
@@ -84,7 +84,7 @@ body.show-header header{
 
 .intro-copy h2{
     font-family: "Bebas Neue", sans-serif;
-    font-size: clamp(13.6rem, 7vw, 9rem);
+    font-size: clamp(10rem, 7vw, 12rem);
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1;
@@ -201,7 +201,7 @@ body.show-header header{
     }
 
     .intro-copy{
-        top: 12vh;
+        top: 9vh;
     }
 
     .intro-copy h2{
