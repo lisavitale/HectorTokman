@@ -168,7 +168,7 @@ header nav{
     display: flex;
     gap: 0.5vw;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     /* sin preserve-3d: Safari en iPhone ocultaba la pantalla del medio */
 }
 
