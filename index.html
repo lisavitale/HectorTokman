@@ -379,7 +379,7 @@
                 video.pause();
             }
 
-            document.body.classList.toggle('show-header', p >= 1);
+            document.body.classList.toggle('show-header', p >= 0.7);
             header.classList.toggle('scrolled', intro.getBoundingClientRect().bottom <= header.offsetHeight);
 
             requestAnimationFrame(render);
