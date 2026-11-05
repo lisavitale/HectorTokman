@@ -7,19 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 
     <!-- SEO -->
-    <title>Trabajos de Héctor Tokman</title>
+    <title>Trabajos de Hector Tokman</title>
     <link rel="icon" type="image/png" href="./images/favicon.png?v=2">
 </head>
 
 <body class="paginaTrabajos">
     <header class="scrolled">
         <a href="./index.html">
-            <h1>Héctor Tokman</h1>
+            <h1>Hector Tokman</h1>
         </a>
         <!-- Boton hamburguesa (solo se ve en celular), abre y cierra el menu con Bootstrap -->
         <button class="menuToggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
@@ -30,23 +30,18 @@
         </button>
         <nav id="menuPrincipal" class="collapse">
             <ul>
-                <a href="./index.html#sobremi">
-                    <li>SOBRE MÍ</li>
-                </a>
-                <a href="./index.html#mistalleres">
-                    <li>MIS TALLERES</li>
-                </a>
-                <a href="./index.html#mistrabajos">
-                    <li class="active">MI TRAYECTORIA</li>
-                </a>
-                <a href="./index.html#contacto">
-                    <li>CONTACTO</li>
-                </a>
+                <li><a href="./index.html#sobremi">SOBRE MÍ</a></li>
+                <li><a href="./index.html#mistalleres">MIS TALLERES</a></li>
+                <li class="active"><a href="./index.html#mistrabajos">MI TRAYECTORIA</a></li>
+                <li><a href="./index.html#contacto">CONTACTO</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <!-- MENU DE TRABAJOS -->
+
         <section id="navTrabajos">
             <h2>Mi trayectoria</h2>
             <nav class="trabajosNav">
@@ -54,9 +49,26 @@
                     <li class="nav-item" data-section="cineTV">Dirección y Producción de Cine y TV</li>
                     <li class="nav-item" data-section="docencia">Docencia</li>
                     <li class="nav-item" data-section="guion">Guion</li>
+                    <li class="nav-item" data-section="reconocimientos">Reconocimientos</li>
+                    <li class="nav-item" data-section="medios">Medios</li>
+                    <li class="nav-item" data-section="jurado">Jurado</li>
                 </ul>
             </nav>
         </section>
+
+        <!-- Para cargar cada item copiar este bloque dentro de la seccion (la imagen con link es opcional):
+            <div class="boxWork">
+                <div>
+                    <h3>Titulo</h3>
+                    <p class="fecha">Año</p>
+                    <p><b>Lugar o institucion</b></p>
+                    <p>Descripcion</p>
+                </div>
+                <a href="https://..." target="_blank"><img src="./images/..." alt="Descripcion de la imagen"></a>
+            </div>
+        -->
+
+        <!-- DIRECCION Y PRODUCCION -->
 
         <section id="cineTV" class="trabajo-seccion">
             <div class="introduccionWork">
@@ -73,8 +85,7 @@
                     <p>Largometraje de ficción – Chile</p>
                     <p>Dirección: Abril Trejo</p>
                 </div>
-                <a href="https://cinechile.cl/pelicula/el-viaje-de-emilio/" target="_blank"><img
-                        src="./images/cine-elViajeDeEmilio.jpg" alt="Imagen del largometraje El Viaje de Emilio"></a>
+                <a href="https://cinechile.cl/pelicula/el-viaje-de-emilio/" target="_blank"><img src="./images/cine-elViajeDeEmilio.jpg" alt="Imagen del largometraje El Viaje de Emilio"></a>
             </div>
 
             <div class="boxWork">
@@ -84,8 +95,7 @@
                     <p><b>"Aguas Milagrosas"</b></p>
                     <p>Largometraje de ficción - Chile</p>
                 </div>
-                <a href="https://cinechile.cl/pelicula/aguas-milagrosas/" target="_blank"><img
-                        src="./images/cine-aguasMilagrosas.jpg" alt="Imagen del largometraje Aguas Milagrosas"></a>
+                <a href="https://cinechile.cl/pelicula/aguas-milagrosas/" target="_blank"><img src="./images/cine-aguasMilagrosas.jpg" alt="Imagen del largometraje Aguas Milagrosas"></a>
             </div>
 
             <div class="boxWork">
@@ -106,7 +116,7 @@
                     <p>Mediometraje – Mendoza, Argentina</p>
                     <p>Coproducción con el INCAA </p>
                 </div>
-                <img src="./images/cine-crisis.jpeg" alt="Imagen del mediometraje Crisis"></a>
+                <img src="./images/cine-crisis.jpeg" alt="Imagen del mediometraje Crisis">
             </div>
 
             <div class="boxWork">
@@ -145,6 +155,8 @@
             </div>
         </section>
 
+        <!-- DOCENCIA -->
+
         <section id="docencia" class="trabajo-seccion">
             <div class="introduccionWork">
                 <p>Siendo muy joven, cuando estudiaba Biología en Ciencias Exactas, me inscribí en una actividad que
@@ -173,8 +185,7 @@
                         <li>Realización: aprender haciendo (2020)</li>
                     </ul>
                 </div>
-                <a href="https://www.eictv.org/" target="_blank"><img src="./images/uni-EICTV.png"
-                        alt="Imagen de la Escuela Internacional de Cine y Televisión (EICTV)"></a>
+                <a href="https://www.eictv.org/" target="_blank"><img src="./images/uni-EICTV.png" alt="Imagen de la Escuela Internacional de Cine y Televisión (EICTV)"></a>
             </div>
 
             <div class="boxWork">
@@ -188,8 +199,7 @@
                     </ul>
                 </div>
                 <div class="masdeuna">
-                    <a href="https://www.unesco.org/es" target="_blank"><img src="./images/Flag_of_UNESCO.png"
-                        alt="Imagen de la UNESCO"></a>
+                    <a href="https://www.unesco.org/es" target="_blank"><img src="./images/Flag_of_UNESCO.png" alt="Imagen de la UNESCO"></a>
                     <img src="./images/programatranscultura.png" alt="Imagen del Programa Transcultura de la UNESCO">
                     <img src="./images/polocaribeno.png" alt="Imagen del Polo Caribeño de Formación Cultural">
                     <img src="./images/UE.png" alt="Imagen de la Unión Europea">
@@ -208,8 +218,7 @@
                         <li>Escritura de guiones: de la idea al proyecto</li>
                     </ul>
                 </div>
-                <a href="https://escueladecinemza.com.ar/web/" target="_blank"><img src="./images/uni-ERCCV.jpg"
-                        alt="Imagen de la Escuela Regional Cuyo de Cine y Video"></a>
+                <a href="https://escueladecinemza.com.ar/web/" target="_blank"><img src="./images/uni-ERCCV.jpg" alt="Imagen de la Escuela Regional Cuyo de Cine y Video"></a>
             </div>
 
             <div class="boxWork">
@@ -222,8 +231,7 @@
                         <li>Herramienta de producción y lenguaje audiovisual</li>
                     </ul>
                 </div>
-                <a href="http://www.ut.edu.co/" target="_blank"><img src="./images/uni-UdeTolima.png"
-                        alt="Imagen de la Universidad del Tolima"></a>
+                <a href="http://www.ut.edu.co/" target="_blank"><img src="./images/uni-UdeTolima.png" alt="Imagen de la Universidad del Tolima"></a>
             </div>
 
             <div class="boxWork">
@@ -232,8 +240,7 @@
                     <p class="fecha">2012</p>
                     <p><b>Instituto Nacional de Cine y Artes Audiovisuales (INCAA) ∙ Argentina</b></p>
                 </div>
-                <a href="https://www.incaa.gob.ar/" target="_blank"><img src="./images/Incaa.jpg"
-                        alt="Imagen del Instituto Nacional de Cine y Artes Audiovisuales"></a>
+                <a href="https://www.incaa.gob.ar/" target="_blank"><img src="./images/Incaa.jpg" alt="Imagen del Instituto Nacional de Cine y Artes Audiovisuales"></a>
             </div>
 
             <div class="boxWork">
@@ -242,7 +249,7 @@
                     <p class="fecha">2012</p>
                     <p><b>Universidad de Arte y Ciencias Sociales ∙ Santiago, Chile</b></p>
                 </div>
-                <img src="./images/arcis.png" alt="Imagen de la Escuela Internacional de Cine y Televisión (EICTV)"></a>
+                <img src="./images/arcis.png" alt="Imagen de la Universidad de Arte y Ciencias Sociales (ARCIS)">
             </div>
 
             <div class="boxWork">
@@ -251,8 +258,7 @@
                     <p class="fecha">2012</p>
                     <p><b>Escuela Regional Cuyo de Cine y Video ∙ Mendoza, Argentina</b></p>
                 </div>
-                <a href="https://escueladecinemza.com.ar/web/" target="_blank"><img src="./images/uni-ERCCV.jpg"
-                        alt="Imagen de la Escuela Regional Cuyo de Cine y Video"></a>
+                <a href="https://escueladecinemza.com.ar/web/" target="_blank"><img src="./images/uni-ERCCV.jpg" alt="Imagen de la Escuela Regional Cuyo de Cine y Video"></a>
             </div>
 
             <div class="boxWork">
@@ -282,10 +288,11 @@
                         <li>Docente y coordinador de proyectos académicos (1990 - 1992)</li>
                     </ul>
                 </div>
-                <a href="https://escueladecinemza.com.ar/web/" target="_blank"><img src="./images/uni-ERCCV.jpg"
-                        alt="Imagen de la Escuela Regional Cuyo de Cine y Video"></a>
+                <a href="https://escueladecinemza.com.ar/web/" target="_blank"><img src="./images/uni-ERCCV.jpg" alt="Imagen de la Escuela Regional Cuyo de Cine y Video"></a>
             </div>
         </section>
+
+        <!-- GUION -->
 
         <section id="guion" class="trabajo-seccion">
             <div class="introduccionWork">
@@ -304,8 +311,7 @@
                         <li>“Habemus Papa“ - largometraje</li>
                     </ul>
                 </div>
-                <a href="https://www.youtube.com/watch?v=tbBUboH0p3g" target="_blank"><img
-                        src="./images/cine-theBorderBaby.jpg" alt="Imagen de la serie The Border Baby"></a>
+                <a href="https://www.youtube.com/watch?v=tbBUboH0p3g" target="_blank"><img src="./images/cine-theBorderBaby.jpg" alt="Imagen de la serie The Border Baby"></a>
             </div>
 
             <div class="boxWork">
@@ -338,12 +344,87 @@
             </div>
         </section>
 
+        <!-- RECONOCIMIENTOS -->
+
+        <section id="reconocimientos" class="trabajo-seccion">
+            <div class="introduccionWork">
+                <p>FALTA INTRODUCCIÓN</p>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>...</h3>
+                    <p class="fecha">2023</p>
+                    <p><b>...</b></p>
+                </div>
+                <a href="https://www.elmostrador.cl/cultura/2023/11/07/festival-internacional-de-cine-recobrado-cerro-en-el-parque-cultural-de-valparaiso/"
+                    target="_blank"><img src="./images/..." alt="..."></a>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>...</h3>
+                    <p class="fecha">2019</p>
+                    <p><b>...</b></p>
+                </div>
+                <a href="https://www.godoycruz.gob.ar/mirada-oeste-hector-tokman-fue-distinguido-se-premiaron-los-ganadores-los-concursos/"
+                    target="_blank"><img src="./images/..." alt="..."></a>
+            </div>
+        </section>
+
+        <!-- JURADO -->
+
+        <section id="jurado" class="trabajo-seccion">
+            <div class="introduccionWork">
+                <p>FALTA INTRODUCCIÓN</p>
+            </div>
+        </section>
+
+        <!-- MEDIOS -->
+
+        <section id="medios" class="trabajo-seccion">
+            <div class="introduccionWork">
+                <p>FALTA INTRODUCCIÓN</p>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>"Hector Tokman: el argentino que hace cine, enseñando sobre cine de bajo presupuesto"</h3>
+                    <p class="fecha">2020</p>
+                    <p><b>TVN Panamá</b></p>
+                </div>
+                <a href="https://www.tvn-2.com/entretenimiento/cine-y-tv/hector-tokman-argentino-cine-presupuesto_1_1197546.html"
+                    target="_blank"><img src="./images/reportaje1.png" alt="Artículo de TVN"></a>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>"“Invasión”: a 50 años, las palabras de Hector Tokman"</h3>
+                    <p class="fecha">2019</p>
+                    <p><b>Los Andes</b></p>
+                </div>
+                <a href="https://www.losandes.com.ar/invasion-a-50-anos-las-palabras-de-hector-tokman"
+                    target="_blank"><img src="./images/reportaje2.png" alt="Artículo de Los Andes"></a>
+            </div>
+
+            <div class="boxWork">
+                <div>
+                    <h3>"Cuidado con el Perro | Temporada 2 | Capítulo 141 - Hector Tokman"</h3>
+                    <p class="fecha">2016</p>
+                    <p><b>Señal U</b></p>
+                </div>
+                <a href="https://youtu.be/EcKP1IkRwDc" target="_blank"><img src="./images/reportaje3.png"
+                        alt="Reportaje de Cuidado con el Perro"></a>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+
         <section id="contacto">
             <p>Si te interesa saber más sobre mis talleres, trabajos o simplemente quieres ponerte en contacto, puedes
                 escribirme a través de los siguientes canales:</p>
             <div class="contactoBox">
-                <a href="https://mail.google.com/mail/u/0/#search/hector.tokman%40gmail.com?compose=new"
-                    target="_blank">
+                <a href="mailto:hector.tokman@gmail.com">
                     <img src="./images/emailblanco.png" alt="Icono de correo electrónico">
                     <p>hector.tokman@gmail.com</p>
                 </a>
@@ -370,7 +451,7 @@
     </main>
 
     <footer>
-        <h2><span id="year"></span> @ Héctor Tokman - Todos los derechos reservados.</h2>
+        <p><span id="year"></span> @ Hector Tokman - Todos los derechos reservados.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

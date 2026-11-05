@@ -166,10 +166,8 @@ header nav{
     position: relative;
     z-index: 1;
     display: flex;
-    gap: 0.5vw;
     width: 100%;
     height: 100vh;
-    /* sin preserve-3d: Safari en iPhone ocultaba la pantalla del medio */
 }
 
 .screen{
@@ -178,32 +176,12 @@ header nav{
     background-color: #000;
 }
 
-.screen.center{
-    flex: 1.2;
-}
-
-/* Las pantallas laterales giran hacia el espectador, como una sala de proyeccion curva */
-.screen.left{
-    transform-origin: right center;
-    transform: perspective(100vw) rotateY(25deg);
-}
-
-.screen.right{
-    transform-origin: left center;
-    transform: perspective(100vw) rotateY(-25deg);
-}
-
 .screen img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* filter: grayscale(1) contrast(1.15) brightness(0.45); */
-}
-
-.screen.center img{
     /* baja la foto para que su borde de arriba quede justo debajo de la curva superior */
     object-position: center 10vh;
-   /*  filter: grayscale(1) contrast(1.1) brightness(0.32) blur(1px); */
 }
 
 .aboutText{
@@ -330,9 +308,11 @@ header nav{
     font-family: "Outfit", sans-serif;
 }
 
+/* Hasta 3 columnas de hasta 400px, centradas sin importar cuantos talleres haya */
 #mistalleres .contenedor{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, min(400px, calc((100% - 50px) / 3)));
+    justify-content: center;
     gap: 25px;
     max-width: 1300px;
     width: 100%;
@@ -410,10 +390,6 @@ header nav{
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
-}
-
-.estado{
-    cursor: default;
 }
 
 .estado.finalizado{
@@ -579,6 +555,11 @@ footer{
     font-family: "Roboto", sans-serif;
 }
 
+footer p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 /* HTML MIS TRABAJOS */
 /* Mismo fondo negro y efecto de pelicula antigua que el index */
 body.paginaTrabajos{
@@ -602,10 +583,6 @@ body.paginaTrabajos header{
     background-color: #1b1b1b;
 }
 
-.boxWork h3{
-    color: #FAF8F5;
-}
-
 
 .cartel{
     background-color: #81c993;
@@ -627,13 +604,9 @@ body.paginaTrabajos header{
 
 .trabajosNav ul{
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     max-width: 90%;
     margin: 0 auto;
     justify-content: center;
-    gap: 0;
 }
 
 .nav-item{
@@ -757,20 +730,8 @@ body.paginaTrabajos header{
     color: #FAF8F5;
 }
 
-#introduccionTrabajos{
-    align-items: center;
-    justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    margin: 0 auto 40px;
-    color: #d9d9d9;
-}
-
-#introduccionTrabajos p{
-    font-size: 2rem;
-    line-height: 1.8;
-}
-
 .boxWork h3{
+    color: #FAF8F5;
     font-size: 3rem;
     font-family: "Outfit", sans-serif;
 }
@@ -948,7 +909,7 @@ body.paginaTrabajos header{
         height: 48px;
     }
 
-    footer h2{
+    footer p{
         font-size: 1.3rem;
     }
 
@@ -991,8 +952,7 @@ body.paginaTrabajos header{
         font-size: 2.2rem;
     }
 
-    .trabajo-seccion p,
-    #introduccionTrabajos p{
+    .trabajo-seccion p{
         font-size: 1.6rem;
     }
 }
