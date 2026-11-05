@@ -834,6 +834,14 @@ body.paginaTrabajos header{
     }
 }
 
+/* SOBRE MI (celular y tablet): la pantalla es angosta y la foto apaisada se recorta;
+   se corre hacia la izquierda para que se vea la persona caminando y no solo el cielo */
+@media (max-width: 1023px) and (min-width: 300px){
+    .screen img{
+        object-position: 18% 10vh;
+    }
+}
+
 /* TABLET */
 @media (max-width: 1023px) and (min-width: 569px){
     /* Talleres y trabajos: una caja debajo de la otra */
