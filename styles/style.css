@@ -139,29 +139,6 @@ header nav{
     align-items: center;
 }
 
-/* Elipses del color del fondo que curvan el borde superior e inferior de las pantallas */
-.screens::before,
-.screens::after{
-    content: "";
-    position: absolute;
-    left: -30vw;
-    width: 160vw;
-    height: 82vh;
-    border-radius: 50%;
-    background-color: #1b1b1b;
-    z-index: 2;
-}
-
-.screens::before{
-    top: -60vh;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.screens::after{
-    top: 87vh;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
-}
-
 .screens-band{
     position: relative;
     z-index: 1;
@@ -180,8 +157,8 @@ header nav{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* baja la foto para que su borde de arriba quede justo debajo de la curva superior */
-    object-position: center 10vh;
+    /* un poco mas oscura para que se lea mejor el texto */
+    filter: brightness(0.3);
 }
 
 .aboutText{
@@ -189,7 +166,8 @@ header nav{
     z-index: 3;
     max-width: 700px;
     margin: -100vh auto 0;
-    padding: 100vh 20px;
+    /* abajo solo un respiro: cuando termina el texto termina la seccion, sin pantalla vacia de foto */
+    padding: 100vh 20px 10vh;
     text-align: center;
     font-size: 1.6rem;
     line-height: 1.55;
@@ -287,6 +265,16 @@ header nav{
     color: #FAF8F5;
     font-weight: 600;
     transition: color 0.3s ease;
+}
+
+/* Tarjetas sin imagen (Reconocimientos y Medios): dos columnas iguales en todos los tamaños */
+.contenedor.mitades{
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+}
+
+.mitades .cajaTexto{
+    padding: 30px 15px;
 }
 
 /* MIS TALLERES */
@@ -834,11 +822,11 @@ body.paginaTrabajos header{
     }
 }
 
-/* SOBRE MI (celular y tablet): la pantalla es angosta y la foto apaisada se recorta;
-   se corre hacia la izquierda para que se vea la persona caminando y no solo el cielo */
+/* SOBRE MI (celular y tablet): la foto apaisada se recorta en pantallas altas;
+   se corre para que la persona quede entera sobre el costado izquierdo */
 @media (max-width: 1023px) and (min-width: 300px){
     .screen img{
-        object-position: 18% 10vh;
+        object-position: 20% center;
     }
 }
 
@@ -857,6 +845,13 @@ body.paginaTrabajos header{
 
     .boxWork img{
         max-width: 220px;
+    }
+}
+
+/* COMPUTADORA: el texto de Sobre mi va directo sobre la foto, sin caja oscura */
+@media (min-width: 1024px){
+    .aboutCard{
+        background-color: transparent;
     }
 }
 
@@ -891,6 +886,11 @@ body.paginaTrabajos header{
 
     .caja img{
         height: 200px;
+    }
+
+    /* "Reconocimientos" no entra en media tarjeta con la letra de escritorio */
+    .mitades .cajaTexto h3{
+        font-size: 1.4rem;
     }
 
     .aboutText{
