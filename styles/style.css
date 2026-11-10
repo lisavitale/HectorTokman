@@ -227,12 +227,14 @@ header nav{
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* sombra marcada: sobre el fondo oscuro una sombra suave no se nota */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .caja:hover{
     transform: translateY(-15px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6);
 }
 
 .caja:hover .cajaTexto{
@@ -654,6 +656,25 @@ body.paginaTrabajos header{
     gap: 10px;
 }
 
+/* Logos en un cuadrado de 2x2 (UNESCO, Transcultura, Polo Caribeño y UE) */
+.masdeuna.grilla2x2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.grilla2x2 a{
+    display: block;
+}
+
+.grilla2x2 img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 .listaTalleres{
     list-style: disc;
     padding-left: 1.8rem;
@@ -662,6 +683,13 @@ body.paginaTrabajos header{
 .boxWork li{
     font-size: 1.6rem;
     font-family: "Montserrat", sans-serif;
+    line-height: 1;
+    /* separacion entre items para que no queden pegados */
+    margin-bottom: 10px;
+}
+
+.boxWork li:last-child{
+    margin-bottom: 0;
 }
 
 .boxWork::before{
@@ -944,7 +972,8 @@ body.paginaTrabajos header{
     }
 
     .boxWork > a,
-    .boxWork > img{
+    .boxWork > img,
+    .masdeuna.grilla2x2{
         width: 100%;
         max-width: none;
     }
