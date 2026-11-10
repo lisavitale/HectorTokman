@@ -228,13 +228,13 @@ header nav{
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* sombra marcada: sobre el fondo oscuro una sombra suave no se nota */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    /* sombra gris: sobre el fondo oscuro una sombra negra no se diferencia */
+    box-shadow: 0 6px 18px rgba(150, 150, 150, 0.25);
 }
 
 .caja:hover{
     transform: translateY(-15px);
-    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 14px 28px rgba(150, 150, 150, 0.35);
 }
 
 .caja:hover .cajaTexto{
