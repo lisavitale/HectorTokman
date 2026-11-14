@@ -188,7 +188,58 @@
                     </div>
                 </div>
             </div>
-            <a href="./mistrabajos.html#docencia" class="verTodos">Ver todos los talleres</a>
+            <button type="button" class="verTodos" data-modal="modalTalleres">Ver todos los talleres</button>
+
+            <!-- Ventana con todos los talleres dictados (la abre "Ver todos los talleres") -->
+            <dialog id="modalTalleres" class="modal modalAncho">
+                <div class="modalContenido">
+                    <button type="button" class="modalCerrar" aria-label="Cerrar">&times;</button>
+                    <h3>Talleres dictados</h3>
+
+                    <!-- Orden cronologico: el mas reciente arriba, el mas viejo abajo -->
+                    <div class="modalTaller">
+                        <h4>Universidad Agustiniana, Cine y Televisión, “Gajes del Oficio”</h4>
+                        <p class="fecha">2018 ∙ Bogotá, Colombia</p>
+                        <ul>
+                            <li>Taller de Producción de Cine de Bajo Presupuesto</li>
+                        </ul>
+                    </div>
+
+                    <div class="modalTaller">
+                        <h4>Escuela Regional Cuyo de Cine y Video (ERCCV)</h4>
+                        <p class="fecha">2014 - 2018 ∙ Mendoza, Argentina</p>
+                        <ul>
+                            <li>Talleres de Cine, Guion y Producción</li>
+                            <li>Talleres Extramuros brindados a la comunidad en los departamentos de Junín y Godoy Cruz</li>
+                        </ul>
+                    </div>
+
+                    <div class="modalTaller">
+                        <h4>Encuentro Internacional de Producción y Gestión Audiovisual</h4>
+                        <p class="fecha">Noviembre 2017 ∙ Valparaíso, Chile</p>
+                        <ul>
+                            <li>Taller de Producción de Cine de Bajo Presupuesto</li>
+                        </ul>
+                    </div>
+
+                    <div class="modalTaller">
+                        <h4>Universidad del Tolima</h4>
+                        <p class="fecha">2013 ∙ Colombia</p>
+                        <ul>
+                            <li>Taller audiovisual de Cine de Bajo Presupuesto: herramientas de producción y lenguaje audiovisual</li>
+                        </ul>
+                    </div>
+
+                    <!-- Sin fecha en el documento: va al final hasta saber el año -->
+                    <div class="modalTaller">
+                        <h4>Instituto Nacional de Cine y Artes Audiovisuales (INCAA)</h4>
+                        <p class="fecha">Argentina</p>
+                        <ul>
+                            <li>“Cómo convertir una idea en un cortometraje” ∙ La Pampa, Comodoro Rivadavia y Misiones</li>
+                        </ul>
+                    </div>
+                </div>
+            </dialog>
 
             <!-- Ventana modal de inscripcion (la abren los botones "Ver más" de talleres que no empezaron) -->
             <dialog id="modalInscripcion" class="modal">

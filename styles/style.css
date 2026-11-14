@@ -465,14 +465,65 @@ dialog.modal::backdrop{
     color: #D4AF37;
 }
 
-/* Link debajo de las cards */
+/* Ventana de todos los talleres: mas ancha, alineada a la izquierda y con scroll si no entra */
+dialog.modal.modalAncho{
+    width: min(620px, calc(100vw - 32px));
+    overflow: hidden;
+}
+
+/* el scroll va en el contenido y la X queda fija en la esquina de la ventana */
+.modalAncho .modalContenido{
+    position: static;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.modalAncho .modalContenido h3{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.modalTaller{
+    padding: 18px 0;
+    border-top: 1px solid #2a2a2a;
+}
+
+.modalTaller h4{
+    font-family: "Outfit", sans-serif;
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 4px;
+}
+
+.modalTaller .fecha{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.modalTaller ul{
+    list-style: disc;
+    padding-left: 2rem;
+}
+
+.modalTaller li{
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+/* Boton debajo de las cards: se ve como link subrayado y abre la ventana de talleres */
 .verTodos{
     margin-top: 40px;
+    font-family: inherit;
     font-size: 2rem;
     font-weight: 600;
     color: #FAF8F5;
+    background: none;
+    border: none;
     border-bottom: 2px solid #D4AF37;
-    padding-bottom: 4px;
+    padding: 0 0 4px;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
