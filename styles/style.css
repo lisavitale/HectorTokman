@@ -639,6 +639,21 @@ body.paginaTrabajos header{
     margin-bottom: 30px;
 }
 
+/* Subtitulos que agrupan los guiones (Guiones propios, Por encargo, Co-guionista, Asesorias) */
+.subtituloGuion{
+    font-family: "Outfit", sans-serif;
+    font-size: 3.4rem;
+    color: #D4AF37;
+    margin: 60px 0 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* La linea de tiempo se corta al final de cada grupo, antes del subtitulo siguiente */
+.boxWork:has(+ .subtituloGuion)::after{
+    display: none;
+}
+
 
 .boxWork{
     position: relative;
@@ -750,6 +765,18 @@ body.paginaTrabajos header{
     color: #FAF8F5;
     font-size: 3rem;
     font-family: "Outfit", sans-serif;
+}
+
+/* Titulos que son links (ej: Reconocimientos): subrayados para que se note que se pueden tocar */
+.boxWork a h3{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    transition: color 0.3s ease;
+}
+
+.boxWork a:hover h3{
+    color: #D4AF37;
 }
 
 @keyframes fadeIn{
@@ -987,6 +1014,11 @@ body.paginaTrabajos header{
 
     .boxWork h3{
         font-size: 2.2rem;
+    }
+
+    .subtituloGuion{
+        font-size: 2.6rem;
+        margin-top: 40px;
     }
 
     .trabajo-seccion p{
